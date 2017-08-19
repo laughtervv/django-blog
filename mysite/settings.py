@@ -25,7 +25,7 @@ SECRET_KEY = 'duaq6*0^26(vuf#-gx@wc79hdy#23^fmvf$pf1gdyh-p6hl876'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['laughtervv.pythonanywhere.com']
 
 
 # Application definition
