@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+<title>Weiyue Wang</title>
+
+<!-- <meta name="viewport" content="width=device-width"/> -->
+<meta charset="UTF-8"> 
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
+
+</head>
+<body id="top">
+<div id="cv" class="instaFade">
+	<div class="mainDetails">
+		
+		<div id="name">
+
+			<h1 class="quickFade "><a href="{% url 'post_list' %}">Weiyue Wang</a></h1>
+			<h6 class="quickFade ">University of Southern California</h6>
+			</div>
+		<!-- 
+		<div id="contactDetails" class="quickFade delayFour">
+		</div> -->
+		<div class="clear"></div>
+	</div>
+	
+	<div id="mainArea" class="quickFade">
+		{% if user.is_authenticated %}
+		    <a href="{% url 'post_new' %}" class="top-menu">new</a>
+		{% endif %}
+        {% block content %}
+        {% endblock %}
+
+	</div>
+</div>
+
+</body>
+</html>
